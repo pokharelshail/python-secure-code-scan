@@ -2,4 +2,43 @@
 
 ## Overview
 
-scanner that works with both GitHub repositories and local directories.
+This project is a Python-based security scanner that works with both GitHub repositories and local directories.. Currently, it scans only Python files for vulnerabilities, using Bandit for code analysis and checking for exposed secrets in configuration files.
+
+## Features
+
+- **Clone GitHub Repositories**: Automatically clone a GitHub repository to scan it.
+- **Scan Dependencies**: Scans for vulnerable dependencies.
+- **Code Scanning**: Uses Bandit to find security issues in Python code.
+- **Configuration Scanning**: Detects exposed secrets in `.env` files.
+- **Reports**: Generates detailed reports in the `reports/` directory.
+
+## Usage
+
+### Cloning and Scanning a GitHub Repository
+
+```bash
+python3 cmd/main.py https://github.com/user/repo.git
+```
+
+### Scanning a Local Directory
+
+```bash
+python3 cmd/main.py /path/to/local/directory
+```
+
+## Requirements
+
+Install the required Python packages with:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Output
+
+- **Vulnerability Scan Report**: `vulnerability_scan_report.txt`
+- **Final Security Report**: `security_report.txt`
+
+## Contributing
+
+Feel free to fork this repository and submit pull requests to improve the scanner.
