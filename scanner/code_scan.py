@@ -2,7 +2,12 @@ import subprocess
 import os
 
 def scan_code(project_path):
-    report_file_name = "reports/vulnerability_scan_report.txt"
+    reports_dir = os.path.join(os.getcwd(), 'reports')
+    if not os.path.exists(reports_dir):
+        os.makedirs(reports_dir)
+
+    report_file_name = os.path.join(reports_dir, "vulnerability_scan_report.txt")
+    
     with open(report_file_name, "w") as report_file:
         python_dirs = []
 
@@ -14,7 +19,7 @@ def scan_code(project_path):
             try:
                 command = ["bandit", "-r", py_dir, "-ll", "-f", "txt"]
                 result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-     
+  
                 report_file.write(f"Bandit scan for directory: {py_dir}\n")
                 report_file.write(result.stdout)
                 report_file.write(result.stderr)
