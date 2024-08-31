@@ -7,7 +7,6 @@ This project is a Python-based security scanner that works with both GitHub repo
 ## Features
 
 - **Clone GitHub Repositories**: Automatically clone a GitHub repository to scan it.
-- **Scan Dependencies**: Scans for vulnerable dependencies.
 - **Code Scanning**: Uses Bandit to find security issues in Python code.
 - **Configuration Scanning**: Detects exposed secrets in `.env` files.
 - **Reports**: Generates detailed reports in the `reports/` directory.
