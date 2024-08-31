@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a Python-based security scanner that works with both GitHub repositories and local directories.. Currently, it scans only Python files for vulnerabilities, using Bandit for code analysis and checking for exposed secrets in configuration files.
+This project is a Python-based security scanner that works with both GitHub repositories and local directories. Currently, it scans only Python files for vulnerabilities, using Bandit for code analysis and checking for exposed secrets in configuration files.
 
 ## Features
 
@@ -25,6 +25,16 @@ python3 cmd/main.py https://github.com/user/repo.git
 ```bash
 python3 cmd/main.py /path/to/local/directory
 ```
+
+## Example with a Vulnerable Flask Project
+
+To see the scanner in action, you can use a deliberately vulnerable Flask project. From the project root, run the scanner with the following command:
+
+```bash
+python3 cmd/main.py https://github.com/we45/Vulnerable-Flask-App.git
+```
+
+This example uses [Vulnerable-Flask-App](https://github.com/we45/Vulnerable-Flask-App) which is an intentionally vulnerable Flask application. Running the command will scan the project for vulnerabilities and generate reports in the reports/ directory.
 
 ## Requirements
 
