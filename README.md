@@ -1,4 +1,4 @@
-# Open Source Python Python Security Scanner
+# Open Source Python Security Scanner
 
 ## Overview
 
@@ -46,7 +46,7 @@ pip install -r requirements.txt
 ## Output
 
 - **Vulnerability Scan Report**: `vulnerability_scan_report.txt`
-- **Final Security Report**: `security_report.txt`
+- **Final Security Report**: `security_report.json`
 
 ## Contributing
 
